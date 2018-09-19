@@ -1,0 +1,253 @@
+﻿<Page
+    x:Class="LabsTogether2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <VariableSizedWrapGrid Orientation="Horizontal">
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 1" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Основы разработки визуальных пользовательских интерфейсов в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Даны x, y, z . Вычислить a, если..." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Вычислить площадь треугольника по всем известным формулам." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+                <Button.Flyout>
+                    <MenuFlyout Placement="Right">
+                        <MenuFlyoutItem Text="Задание 1"/>
+                        <MenuFlyoutItem Text="Задание 2"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 2" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для ввода/вывода в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание: Присвоить случайным образом значения числовым переменным а1, а2,..., а9. Вывести на экран значения этих переменных таблицей" Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 3" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования конструкции условного оператора в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Написать на языке C# логическое выражение, принимающее значение истина или ложь при выполнении условия: Натуральное число p делится нацело на натуральное число q." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Составить программу для вычисления функции." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 4" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования конструкции оператора выбора в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание: Составить программу вычисления площадей различных геометрических фигур." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 5" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования конструкций циклов в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Составить программу определения минимального элемента из трех эле-ментов х1, х2, х3." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Найти сумму ряда при заданном n." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 3: Найти сумму бесконечного ряда." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 4: Дано натуральное число. Определить сколько раз в нем встречается цифра а." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 6" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования массивов в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Написать программу нахождения минимального и максимального элемен-тов заданной последовательности чисел. Вывести на экран значения и порядко-вые номера искомых элементов." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Написать программу для ввода/вывода в массив данных с различной длинной записей. Например, создать массив массивов, перечисляющий раз-личные свойства одного объекта." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 7" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования строк в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Написать программу подсчета суммарного числа букв 'а' и букв 'b' в за-данной строковой переменной. Вывести на экран каких букв больше." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Написать программу поиска подстроки в заданной строке. В случае нахождения заданной подстроки необходимо удалить ее." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 3:Составить программу в соответствии с вариантом." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 8" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуальных пользовательских интерфейсов для программирования подпрограмм»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание: Даны действительные числа a, b. Получить u = min(a, b-a), y = min(ab, a+b), k = min(u+v2, 3.14). Вычисление u, v и k оформите в виде функций." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 9" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка визуального пользовательского интерфейса, реализующего прин-ципы инкапсуляции в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Создать класс, описывающий треугольник. Описать характеристики гео-метрической фигуры, добавив соответствующие поля. Изменения полей при этом необходимо обработать с помощью свойств." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Создать объект класса, инициализировать его. Связать визуальные компо-ненты Visual Studio с проектируемым классом." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 3: Добавить методы для расчета площади и периметра треугольника." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 4: Создать классы необходимые для описания сведений об абитуриенте и ме-тоды для управления полученными данными. В классах должна содержаться основная информация о паспортных данных абитуриента, об уровне образова-ния, об экзаменах, о выбранных специальностях." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 10" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка многооконного пользовательского интерфейса в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Разработать многооконный интерфейс, добавляя правой кнопкой в дерево проекта новые компоненты «форма» и добавляя кнопки для открытия (закры-тия) форм." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Разработать визуальное приложение, содержащее базовые и наследуемые классы, проверив их работу с помощью многооконного интерфейса." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 3: Добавить области видимости в классы." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 11" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка программного интерфейса визуального приложения в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Создать проект, включающий в себя сборку предыдущих нескольких лабораторных работ." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Создать программный интерфейс, реализующий принципы полиморфизма." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+            <Button Style="{StaticResource btnMainMenu}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Лабораторная работа № 12" Style="{StaticResource tbHeadline}"/>
+                        <TextBlock Text="«Разработка интерфейса визуального приложения для работы с файловой си-стемой в среде Visual Studio»" Style="{StaticResource tbDescription}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel >
+                            <TextBlock Text="Задание 1: Разработать интерфейс приложения и реализовать функции создания папки." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 2: Разработать интерфейс приложения и реализовать функции создания текстового файла." Style="{StaticResource tbTask}"/>
+                            <TextBlock Text="Задание 3: Разработать интерфейс приложения и реализовать функции чтения из файла." Style="{StaticResource tbTask}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Button>
+
+        </VariableSizedWrapGrid>
+    </ScrollViewer>
+</Page>
