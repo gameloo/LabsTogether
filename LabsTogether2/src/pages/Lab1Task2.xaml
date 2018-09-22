@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab1Task2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 1" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 2" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Вычислить площадь треугольника по всем известным формулам." Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Padding="5">
+                    <TextBlock Text="Тип треугольника"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbArbitraryTriangle" Click="Triangle_Click" Content="Произвольный"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbEquilateralTriangle" Click="Triangle_Click" Content="Равносторонний"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbRightTriangle" Click="Triangle_Click" Content="Прямоугольный"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Name="spArbitraryTriangle" Visibility="Collapsed" Padding="5">
+                    <TextBlock Text="Поиск площади через:"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba1" Content="Сторону и высоту проведенную к ней"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba2" Content="Две стороны и угол между ними"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba3" Content="3 стороны"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba4" Content="Полупериметр и радиус вписанной окружности"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba5" Content="Произведение сторон и радиус описанной окружности"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Name="spEquilateralTriangle" Visibility="Collapsed" Padding="5">
+                    <TextBlock Text="Поиск площади через:"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe1" Content="Сторону"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe2" Content="Радиус вписанной окружности"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe3" Content="Радиус описанной окружности"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Name="spRightTriangle" Visibility="Collapsed" Padding="5">
+                    <TextBlock Text="Поиск площади через:"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr1" Content="Катеты"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr2" Content="Катет и острый угол"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr3" Content="Гипотенузу и любой из острых углов"/>
+                </StackPanel>
+                
+            </Grid>
+        </RelativePanel>
+    </Grid>
+</Page>

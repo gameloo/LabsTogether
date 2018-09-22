@@ -50,11 +50,7 @@ namespace LabsTogether2.src.pages
                 };
 
                 ContentDialogResult result = await errorDialog.ShowAsync();
-            }
-
-            
+            }   
         }
-
-
     }
 }

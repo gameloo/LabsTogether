@@ -30,7 +30,7 @@
                 <Button.Flyout>
                     <MenuFlyout Placement="Right">
                         <MenuFlyoutItem Text="Задание 1" Click="MenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Text="Задание 2"/>
+                        <MenuFlyoutItem Text="Задание 2" Click="MenuFlyoutItem_Click_1"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
