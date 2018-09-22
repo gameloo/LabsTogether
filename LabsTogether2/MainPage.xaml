@@ -29,7 +29,7 @@
                 </Grid>
                 <Button.Flyout>
                     <MenuFlyout Placement="Right">
-                        <MenuFlyoutItem Text="Задание 1"/>
+                        <MenuFlyoutItem Text="Задание 1" Click="MenuFlyoutItem_Click"/>
                         <MenuFlyoutItem Text="Задание 2"/>
                     </MenuFlyout>
                 </Button.Flyout>
