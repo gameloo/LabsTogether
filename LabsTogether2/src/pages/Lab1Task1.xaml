@@ -8,7 +8,27 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock> Hello page!</TextBlock>
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 1" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 1" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Даны x, y, z . Вычислить a, если:" Style="{StaticResource taskTextBlock}"/>
+            <Grid Background="White">
+                <Image Source= "../pic/lab1.png" Stretch="None" HorizontalAlignment="Left"/>
+            </Grid>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="10">
+            <TextBox Name="tbX" PlaceholderText="X" Margin="5"/>
+            <TextBox Name="tbY" PlaceholderText="Y" RelativePanel.RightOf="tbX" Margin="5"/>
+            <TextBox Name="tbZ" PlaceholderText="Z" RelativePanel.RightOf="tbY" Margin="5"/>
+            <Button Click="BtnCalculate_ClickAsync" Name="btnCalculate" RelativePanel.Below="tbX" Margin="5" Content="Calculate"/>
+            <TextBlock Name="tblA" Text="a = " RelativePanel.Below="btnCalculate" Margin="5" Style="{StaticResource taskTextBlock}"/>
+            <TextBox Name="tbA" PlaceholderText="-" RelativePanel.RightOf="tblA" RelativePanel.Below="btnCalculate" Margin="5"/>
+        </RelativePanel>
     </Grid>
 </Page>
