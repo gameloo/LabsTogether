@@ -37,5 +37,10 @@ namespace LabsTogether2
         {
             Frame.Navigate(typeof(Lab1Task2));
         }
+
+        private void Button_Click_Load_Lab_2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Lab2));
+        }
     }
 }

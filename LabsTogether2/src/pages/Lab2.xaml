@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 2" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 1" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Присвоить случайным образом значения числовым переменным а1, а2,..., а9. Вывести на экран значения этих переменных следующей таблицей:" TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="a1" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="a2  a3" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="a4" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="a5  a6" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="a7  a8  a9" Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="5">
+            <Button Name="btnRabdomize" Content="Randomize" Click="BtnRabdomize_Click"/>
+            <Grid RelativePanel.Below="btnRabdomize" Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="45"/>
+                    <ColumnDefinition Width="45"/>
+                    <ColumnDefinition Width="45"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="a1" Grid.Row="0" Grid.Column="0" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a2" Grid.Row="1" Grid.Column="0" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a3" Grid.Row="1" Grid.Column="1" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a4" Grid.Row="2" Grid.Column="0" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a5" Grid.Row="3" Grid.Column="0" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a6" Grid.Row="3" Grid.Column="1" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a7" Grid.Row="4" Grid.Column="0" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a8" Grid.Row="4" Grid.Column="1" Style="{StaticResource taskTextBlock}"/>
+                <TextBlock Name="a9" Grid.Row="4" Grid.Column="2" Style="{StaticResource taskTextBlock}"/>
+            </Grid>
+        </RelativePanel>
+    </Grid>
+</Page>
