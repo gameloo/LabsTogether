@@ -113,6 +113,12 @@
     <Compile Include="src\pages\Lab2.xaml.cs">
       <DependentUpon>Lab2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="src\pages\Lab3Task1.xaml.cs">
+      <DependentUpon>Lab3Task1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\pages\Lab3Task2.xaml.cs">
+      <DependentUpon>Lab3Task2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +136,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="src\pic\lab1.png" />
+    <Content Include="src\pic\lab3.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -149,6 +156,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\pages\Lab2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab3Task1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab3Task2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
