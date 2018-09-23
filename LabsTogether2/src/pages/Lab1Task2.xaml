@@ -28,31 +28,37 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Padding="5">
                     <TextBlock Text="Тип треугольника"/>
-                    <RadioButton GroupName="typeTriangle" Name="rbArbitraryTriangle" Click="Triangle_Click" Content="Произвольный"/>
-                    <RadioButton GroupName="typeTriangle" Name="rbEquilateralTriangle" Click="Triangle_Click" Content="Равносторонний"/>
-                    <RadioButton GroupName="typeTriangle" Name="rbRightTriangle" Click="Triangle_Click" Content="Прямоугольный"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbArbitraryTriangle" Checked="Triangle_Click" Content="Произвольный"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbEquilateralTriangle" Checked="Triangle_Click" Content="Равносторонний"/>
+                    <RadioButton GroupName="typeTriangle" Name="rbRightTriangle" Checked="Triangle_Click" Content="Прямоугольный"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Name="spArbitraryTriangle" Visibility="Collapsed" Padding="5">
                     <TextBlock Text="Поиск площади через:"/>
-                    <RadioButton GroupName="arbitraryTriangle" Name="rba1" Content="Сторону и высоту проведенную к ней"/>
-                    <RadioButton GroupName="arbitraryTriangle" Name="rba2" Content="Две стороны и угол между ними"/>
-                    <RadioButton GroupName="arbitraryTriangle" Name="rba3" Content="3 стороны"/>
-                    <RadioButton GroupName="arbitraryTriangle" Name="rba4" Content="Полупериметр и радиус вписанной окружности"/>
-                    <RadioButton GroupName="arbitraryTriangle" Name="rba5" Content="Произведение сторон и радиус описанной окружности"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba1" Checked="Rba_Click" Content="Сторону и высоту проведенную к ней"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba2" Checked="Rba_Click" Content="Две стороны и угол между ними"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba3" Checked="Rba_Click" Content="3 стороны"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba4" Checked="Rba_Click" Content="Полупериметр и радиус вписанной окружности"/>
+                    <RadioButton GroupName="arbitraryTriangle" Name="rba5" Checked="Rba_Click" Content="Произведение сторон и радиус описанной окружности"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Name="spEquilateralTriangle" Visibility="Collapsed" Padding="5">
                     <TextBlock Text="Поиск площади через:"/>
-                    <RadioButton GroupName="equilateralTriangle" Name="rbe1" Content="Сторону"/>
-                    <RadioButton GroupName="equilateralTriangle" Name="rbe2" Content="Радиус вписанной окружности"/>
-                    <RadioButton GroupName="equilateralTriangle" Name="rbe3" Content="Радиус описанной окружности"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe1" Checked="Rbe_Click" Content="Сторону"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe2" Checked="Rbe_Click" Content="Радиус вписанной окружности"/>
+                    <RadioButton GroupName="equilateralTriangle" Name="rbe3" Checked="Rbe_Click" Content="Радиус описанной окружности"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Name="spRightTriangle" Visibility="Collapsed" Padding="5">
                     <TextBlock Text="Поиск площади через:"/>
-                    <RadioButton GroupName="rightTriangle" Name="rbr1" Content="Катеты"/>
-                    <RadioButton GroupName="rightTriangle" Name="rbr2" Content="Катет и острый угол"/>
-                    <RadioButton GroupName="rightTriangle" Name="rbr3" Content="Гипотенузу и любой из острых углов"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr1" Checked="Rbr_Click" Content="Катеты"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr2" Checked="Rbr_Click" Content="Катет и острый угол"/>
+                    <RadioButton GroupName="rightTriangle" Name="rbr3" Checked="Rbr_Click" Content="Гипотенузу и любой из острых углов"/>
                 </StackPanel>
-                
+                <StackPanel Grid.Column="2" Name="spCalculate" Padding="5" Visibility="Collapsed">
+                    <TextBox Name="tb1" Margin="5"/>
+                    <TextBox Name="tb2" Margin="5"/>
+                    <TextBox Name="tb3" Margin="5"/>
+                    <Button Name="btnCalculate" Content="Calculate" Click="BtnCalculate_ClickAsync" Margin="5"/>
+                    <TextBox Name="tbResult" PlaceholderText="S =" Margin="5"/>
+                </StackPanel>
             </Grid>
         </RelativePanel>
     </Grid>

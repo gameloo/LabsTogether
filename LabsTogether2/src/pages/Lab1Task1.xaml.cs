@@ -42,14 +42,7 @@ namespace LabsTogether2.src.pages
             }
             catch (FormatException ex)
             {
-                ContentDialog errorDialog = new ContentDialog()
-                {
-                    Title = "Ошибка",
-                    Content = ex.Message,
-                    PrimaryButtonText = "ОК",
-                };
-
-                ContentDialogResult result = await errorDialog.ShowAsync();
+                await other.Window.ShowErrorWindowAsync(ex);
             }   
         }
     }

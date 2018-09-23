@@ -15,7 +15,7 @@ namespace LabsTogether2.src.other
         /// Поиск площади равностороннего треугольника, через сторону.
         /// </summary>
         /// <param name="side">Сторона треугольника.</param>
-        public static double СalculateS(this Triangle triangle, double side)
+        public static double EquilateralTriangleСalculateS(this Triangle triangle, double side)
         {
             if (side <= 0) throw new ArgumentException();
             return Math.Sqrt(3) * Math.Pow(side, 2) / 4;
@@ -25,7 +25,7 @@ namespace LabsTogether2.src.other
         /// Поиск площади равностороннего треугольника, через радиус вписанной окружности.
         /// </summary>
         /// <param name="r">Радиус вписанной окружности.</param>
-        public static double СalculateS1(this Triangle triangle, double r)
+        public static double EquilateralTriangleСalculateS1(this Triangle triangle, double r)
         {
             if (r <= 0) throw new ArgumentException();
             return 3 * Math.Sqrt(3) * Math.Pow(r, 2);
@@ -35,7 +35,7 @@ namespace LabsTogether2.src.other
         /// Поиск площади равностороннего треугольника, через радиус описанной окружности.
         /// </summary>
         /// <param name="R">Радиус описанной окружности.</param>
-        public static double СalculateS2(this Triangle triangle, double R)
+        public static double EquilateralTriangleСalculateS2(this Triangle triangle, double R)
         {
             if (R <= 0) throw new ArgumentException();
             return 3 * Math.Sqrt(3) * Math.Pow(R, 2) / 4;

@@ -103,6 +103,7 @@
     <Compile Include="src\other\EquilateralTriangleExtension.cs" />
     <Compile Include="src\other\Triangle.cs" />
     <Compile Include="src\other\ArbitraryTriangleExtension.cs" />
+    <Compile Include="src\other\Window.cs" />
     <Compile Include="src\pages\Lab1Task1.xaml.cs">
       <DependentUpon>Lab1Task1.xaml</DependentUpon>
     </Compile>
