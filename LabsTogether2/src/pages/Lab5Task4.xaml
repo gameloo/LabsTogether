@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab5Task4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 5" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 4" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Дано натуральное число. Определить сколько раз в нем встречается цифра а." Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="10">
+            <TextBox Name="tbNumber" PlaceholderText="Натуральное число" Margin="5"/>
+            <TextBox Name="tbNumeral" RelativePanel.Below="tbNumber" PlaceholderText="Цифра" Margin="5"/>
+            <Button Name="btnCalculate" Content="Calculate" Click="BtnCalculate_Click_Async" RelativePanel.Below="tbNumeral" Margin="5"/>
+            <TextBlock Name="tblHeader" Text="Количество вхождений:" RelativePanel.Below="btnCalculate"/>
+            <TextBlock Name="tblCount" Text="-" RelativePanel.Below="btnCalculate" RelativePanel.RightOf="tblHeader"/>
+        </RelativePanel>
+    </Grid>
+</Page>

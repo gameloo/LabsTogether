@@ -125,6 +125,15 @@
     <Compile Include="src\pages\Lab5Task1.xaml.cs">
       <DependentUpon>Lab5Task1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="src\pages\Lab5Task2.xaml.cs">
+      <DependentUpon>Lab5Task2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\pages\Lab5Task3.xaml.cs">
+      <DependentUpon>Lab5Task3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\pages\Lab5Task4.xaml.cs">
+      <DependentUpon>Lab5Task4.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +153,8 @@
     <Content Include="src\pic\lab1.png" />
     <Content Include="src\pic\lab3.png" />
     <Content Include="src\pic\Lab4.png" />
+    <Content Include="src\pic\lab5task2.png" />
+    <Content Include="src\pic\lab5task3.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -179,6 +190,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\pages\Lab5Task1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab5Task2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab5Task3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab5Task4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
