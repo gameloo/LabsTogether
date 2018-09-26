@@ -53,15 +53,15 @@ namespace LabsTogether2.src.pages
             {
                 if (sender.Equals(minElement))
                 {
-                    bool listHaveMin = false;
+                    bool listHaveNum = false;
                     foreach (TextBox box in listElements)
                         if (box.Text != "")
                         {
-                            listHaveMin = true;
+                            listHaveNum = true;
                             minElement = box;
                             break;
                         }
-                    if (!listHaveMin)
+                    if (!listHaveNum)
                     {
                         minElement = null;
                         tblMinElement.Text = "-";
