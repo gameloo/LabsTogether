@@ -87,5 +87,25 @@ namespace LabsTogether2
         {
            // Frame.Navigate(typeof(Lab5Task2));
         }
+
+        private void MenuFlyoutItem_Click_Lab7Task1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Lab7Task1));
+        }
+
+        private void MenuFlyoutItem_Click_Lab7Task2(object sender, RoutedEventArgs e)
+        {
+            //Frame.Navigate(typeof(Lab7Task2));
+        }
+
+        private void MenuFlyoutItem_Click_Lab7Task3(object sender, RoutedEventArgs e)
+        {
+            //Frame.Navigate(typeof(Lab7Task3));
+        }
+
+        private void MenuFlyoutItem_Click_Lab7Task4(object sender, RoutedEventArgs e)
+        {
+            //Frame.Navigate(typeof(Lab7Task4));
+        }
     }
 }

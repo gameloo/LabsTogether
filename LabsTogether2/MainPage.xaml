@@ -168,6 +168,14 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
+                <Button.Flyout>
+                    <MenuFlyout Placement="Right">
+                        <MenuFlyoutItem Text="Задание 1" Click="MenuFlyoutItem_Click_Lab7Task1"/>
+                        <MenuFlyoutItem Text="Задание 2" Click="MenuFlyoutItem_Click_Lab7Task2"/>
+                        <MenuFlyoutItem Text="Задание 3" Click="MenuFlyoutItem_Click_Lab7Task3"/>
+                        <MenuFlyoutItem Text="Задание 4" Click="MenuFlyoutItem_Click_Lab7Task4"/>
+                    </MenuFlyout>
+                </Button.Flyout>
             </Button>
 
             <Button Style="{StaticResource btnMainMenu}">

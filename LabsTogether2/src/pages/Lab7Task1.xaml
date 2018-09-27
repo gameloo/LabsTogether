@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab7Task1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 7" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 1" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Написать программу подсчета суммарного числа букв 'а' и букв 'b' в за-данной строковой переменной. Вывести на экран каких букв больше." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="5">
+            <TextBox Name="tbString" PlaceholderText="Строка" Margin="5"/>
+            <TextBox Name="tbCharA" PlaceholderText="a" RelativePanel.Below="btnCalculate" Margin="5"/>
+            <TextBox Name="tbCharB" PlaceholderText="b" RelativePanel.Below="tbCharA" Margin="5"/>
+
+            <TextBlock Name="tblCountA" Style="{StaticResource taskTextBlock}" RelativePanel.RightOf="tbCharA" Margin="5" RelativePanel.Below="btnCalculate"/>
+            <TextBlock Name="tblCountB" Style="{StaticResource taskTextBlock}" RelativePanel.RightOf="tbCharB" Margin="5" RelativePanel.Below="tbCharA"/>
+            <TextBlock Name="tblMoreCountInfo" Style="{StaticResource taskTextBlock}" RelativePanel.Below="tbCharB"/>
+
+            <Button Name="btnCalculate" Content="Calculate" Click="Calculate_Click_Async" RelativePanel.Below="tbString" Margin="5"/>
+        </RelativePanel>
+    </Grid>
+</Page>
