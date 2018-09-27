@@ -140,6 +140,9 @@
     <Compile Include="src\pages\Lab7Task1.xaml.cs">
       <DependentUpon>Lab7Task1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="src\pages\Lab7Task2.xaml.cs">
+      <DependentUpon>Lab7Task2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -216,6 +219,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\pages\Lab7Task1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab7Task2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
