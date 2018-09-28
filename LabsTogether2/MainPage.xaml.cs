@@ -100,7 +100,7 @@ namespace LabsTogether2
 
         private void MenuFlyoutItem_Click_Lab7Task3(object sender, RoutedEventArgs e)
         {
-            //Frame.Navigate(typeof(Lab7Task3));
+            Frame.Navigate(typeof(Lab7Task3));
         }
 
     }

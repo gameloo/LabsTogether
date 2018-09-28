@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab7Task3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 7" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 3" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Составить программу в соответствии с вариантом." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Вариант 3. Создание базы данных студентов группы. Осуществить функцию поиска по фамилиям." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="5">
+
+            <ListBox Name="lvStudents" ItemsSource="{x:Bind students.Values}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:Student" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Path=FirstName}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Path=LastName}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding Path=Patronymic}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </RelativePanel>
+    </Grid>
+</Page>
