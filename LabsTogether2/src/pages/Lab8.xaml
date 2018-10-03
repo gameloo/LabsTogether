@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="LabsTogether2.src.pages.Lab8"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 8" Style="{StaticResource taskHeadlineBlock}"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Задание № 1" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Даны действительные числа a, b. Получить u = min(a, b-a), v = min(ab, a+b), k = min(u+v2, 3.14). Вычисление u, v и k оформите в виде функций." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+        </StackPanel>
+        <RelativePanel Grid.Row="2" Padding="5">
+            <TextBox Name="tbA" PlaceholderText="a" Margin="5"/>
+            <TextBox Name="tbB" PlaceholderText="b" RelativePanel.Below="tbA" Margin="5"/>
+            <TextBlock Name="tblU" Text="u: " RelativePanel.Below="tbB" Margin="5" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Name="tblV" Text="v: " RelativePanel.Below="tblU" Margin="5" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Name="tblK" Text="k: " RelativePanel.Below="tblV"  Margin="5" Style="{StaticResource taskTextBlock}"/>
+            <Button Click="Button_Click" Content="Calculate" RelativePanel.Below="tblK"/>
+        </RelativePanel>
+    </Grid>
+</Page>

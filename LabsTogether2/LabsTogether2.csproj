@@ -149,6 +149,9 @@
     <Compile Include="src\pages\Lab7Task3.xaml.cs">
       <DependentUpon>Lab7Task3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="src\pages\Lab8.xaml.cs">
+      <DependentUpon>Lab8.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\pages\Lab9.xaml.cs">
       <DependentUpon>Lab9.xaml</DependentUpon>
     </Compile>
@@ -240,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\pages\Lab7Task3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\pages\Lab8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
