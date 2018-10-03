@@ -255,7 +255,7 @@
                 </Grid>
             </Button>
 
-            <Button Style="{StaticResource btnMainMenu}">
+            <Button Style="{StaticResource btnMainMenu}" Click="Button_Click_Load_Lab_12">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>

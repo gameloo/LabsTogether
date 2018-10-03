@@ -28,9 +28,11 @@ namespace LabsTogether2.src.pages
         public Lab7Task3()
         {
             this.InitializeComponent();
-            students = new Hashtable();
-            students.Add(1111 ,new Student() { FirstName = "Ivan", LastName = "Ivanov", Patronymic = "Ivanovich" });
-            students.Add(1112 ,new Student() { FirstName = "Alex", LastName = "Ivanov", Patronymic = "Alexeevich" });
+            students = new Hashtable
+            {
+                { 1111, new Student() { FirstName = "Ivan", LastName = "Ivanov", Patronymic = "Ivanovich" } },
+                { 1112, new Student() { FirstName = "Alex", LastName = "Ivanov", Patronymic = "Alexeevich" } }
+            };
         }
     }
 

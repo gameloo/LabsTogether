@@ -104,6 +104,9 @@
     <Compile Include="src\other\Triangle.cs" />
     <Compile Include="src\other\ArbitraryTriangleExtension.cs" />
     <Compile Include="src\other\Window.cs" />
+    <Compile Include="src\pages\Lab12.xaml.cs">
+      <DependentUpon>Lab12.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\pages\Lab1Task1.xaml.cs">
       <DependentUpon>Lab1Task1.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\pages\Lab12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\pages\Lab1Task1.xaml">
       <SubType>Designer</SubType>
