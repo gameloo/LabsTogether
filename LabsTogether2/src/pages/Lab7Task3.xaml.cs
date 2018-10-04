@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,35 +25,29 @@ namespace LabsTogether2.src.pages
     /// </summary>
     public sealed partial class Lab7Task3 : Page
     {
-        //private Hashtable students;
-        private List<Student> students;
+        private ObservableCollection<Student> students;
         private List<LevelOfEducation> levelOfEducations;
 
         public Lab7Task3()
         {
             this.InitializeComponent();
-            //students = new Hashtable
-            //{
-            //    { 1111, new Student() { FirstName = "Ivan", LastName = "Ivanov", Patronymic = "Ivanovich" } },
-            //    { 1112, new Student() { FirstName = "Alex", LastName = "Ivanov", Patronymic = "Alexeevich" } }
-            //};
-            students = new List<Student>();
+            students = new ObservableCollection<Student>();
             levelOfEducations = Enum.GetValues(typeof(LevelOfEducation)).Cast<LevelOfEducation>().ToList();
-            lvStudents.ItemsSource = students;
-            students.Add(new Student("Ivan", "Ivanov", "Ivanovich", 1234, LevelOfEducation.Bachelor));
-  
+            
         }
 
-        private void AddNewStudent(object sender, RoutedEventArgs e)
-        { 
-            students.Add(new Student(tbFN.Text, tbLN.Text,tbP.Text, Int32.Parse(tbPID.Text), (LevelOfEducation)cbLOE.SelectedItem));
+        private async void AddNewStudent(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                students.Add(new Student(tbFN.Text, tbLN.Text, tbP.Text, Int32.Parse(tbPID.Text), (LevelOfEducation)cbLOE.SelectedItem));
+                lvStudents.UpdateLayout();
+            }
+            catch (Exception ex)
+            {
+                await other.Window.ShowErrorWindowAsync(ex);
+            }
         }
+ 
     }
-
-    //public class Student
-    //{
-    //    public string FirstName { get; set; }
-    //    public string LastName { get; set; }
-    //    public string Patronymic { get; set; }
-    //}
 }

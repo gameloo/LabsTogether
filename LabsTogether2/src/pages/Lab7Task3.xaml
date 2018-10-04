@@ -23,9 +23,9 @@
         </StackPanel>
         <RelativePanel Grid.Row="2" Padding="5">
 
-            <ListBox Name="lvStudents" ItemsSource="{Binding}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate >
+            <ListView Name="lvStudents" ItemsSource="{x:Bind students}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="300"/>
@@ -37,8 +37,8 @@
                             <TextBlock Grid.Column="2" Text="{Binding Path=Patronymic}"/>
                         </Grid>
                     </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                </ListView.ItemTemplate>
+            </ListView>
             <StackPanel Orientation="Horizontal" RelativePanel.Below="lvStudents">
                 <Button Content="Add" Margin="5" Click="AddNewStudent"/>
                 <TextBox Name="tbFN" PlaceholderText="Имя" Margin="5"/>
