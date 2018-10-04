@@ -23,9 +23,9 @@
             </Grid>
         </StackPanel>
         <RelativePanel Grid.Row="2" Padding="10">
-            <TextBox Name="tbX" PlaceholderText="X" Margin="5"/>
-            <TextBox Name="tbY" PlaceholderText="Y" RelativePanel.RightOf="tbX" Margin="5"/>
-            <TextBox Name="tbZ" PlaceholderText="Z" RelativePanel.RightOf="tbY" Margin="5"/>
+            <TextBox Name="tbX" PlaceholderText="X" Margin="5" BeforeTextChanging="BeforeTextChanging"/>
+            <TextBox Name="tbY" PlaceholderText="Y" RelativePanel.RightOf="tbX" Margin="5" BeforeTextChanging="BeforeTextChanging" />
+            <TextBox Name="tbZ" PlaceholderText="Z" RelativePanel.RightOf="tbY" Margin="5" BeforeTextChanging="BeforeTextChanging"/>
             <Button Click="BtnCalculate_ClickAsync" Name="btnCalculate" RelativePanel.Below="tbX" Margin="5" Content="Calculate"/>
             <TextBlock Name="tblA" Text="a = " RelativePanel.Below="btnCalculate" Margin="5" Style="{StaticResource taskTextBlock}"/>
             <TextBox Name="tbA" PlaceholderText="-" RelativePanel.RightOf="tblA" RelativePanel.Below="btnCalculate" Margin="5"/>

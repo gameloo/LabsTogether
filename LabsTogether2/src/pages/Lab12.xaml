@@ -16,6 +16,6 @@
     
     
     <Grid Background="White">
-        <TextBox x:Name="tbWindow" VerticalAlignment="Stretch" TextWrapping="Wrap" KeyDown="TbWindow_KeyDown" ScrollViewer.IsVerticalRailEnabled="True"/>
+        <TextBox x:Name="tbWindow" AcceptsReturn="True" VerticalAlignment="Stretch" TextWrapping="Wrap" ScrollViewer.IsVerticalRailEnabled="True"/>
     </Grid>
 </Page>

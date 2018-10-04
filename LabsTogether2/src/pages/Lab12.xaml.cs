@@ -25,6 +25,7 @@ namespace LabsTogether2.src.pages
     /// </summary>
     public sealed partial class Lab12 : Page
     {
+
         public Lab12()
         {
             this.InitializeComponent();
@@ -68,15 +69,6 @@ namespace LabsTogether2.src.pages
                 {
                     await other.Window.ShowErrorWindowAsync(ex);
                 }
-            }
-        }
-
-        private void TbWindow_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-           if (e.Key == Windows.System.VirtualKey.Enter)
-            {
-                tbWindow.Text += "\n";
-                tbWindow.SelectionStart = tbWindow.Text.Length;
             }
         }
     }

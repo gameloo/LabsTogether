@@ -45,5 +45,17 @@ namespace LabsTogether2.src.pages
                 await other.Window.ShowErrorWindowAsync(ex);
             }   
         }
+
+        private void BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            
+            if (!Regex.IsMatch(args.NewText, @"^-?\d+,?\d{0,}$") && (sender.Text != ""))
+            {
+                sender.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);   
+            }
+            else sender.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Green);
+        }
+
+       
     }
 }

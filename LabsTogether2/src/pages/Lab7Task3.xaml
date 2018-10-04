@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:LabsTogether2.src.pages"
+    xmlns:enum="using:LabsTogether2.src.enums"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -22,9 +23,9 @@
         </StackPanel>
         <RelativePanel Grid.Row="2" Padding="5">
 
-            <ListBox Name="lvStudents" ItemsSource="{x:Bind students.Values}">
+            <ListBox Name="lvStudents" ItemsSource="{Binding}">
                 <ListBox.ItemTemplate>
-                    <DataTemplate x:DataType="local:Student" >
+                    <DataTemplate >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="300"/>
@@ -38,7 +39,14 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
+            <StackPanel Orientation="Horizontal" RelativePanel.Below="lvStudents">
+                <Button Content="Add" Margin="5" Click="AddNewStudent"/>
+                <TextBox Name="tbFN" PlaceholderText="Имя" Margin="5"/>
+                <TextBox Name="tbLN" PlaceholderText="Фамилия" Margin="5"/>
+                <TextBox Name="tbP" PlaceholderText="Отчество" Margin="5"/>
+                <TextBox Name="tbPID" PlaceholderText="Номер паспорта" Margin="5"/>
+                <ComboBox Name="cbLOE" ItemsSource="{x:Bind levelOfEducations}" Margin ="5"/>
+            </StackPanel>
         </RelativePanel>
     </Grid>
 </Page>
