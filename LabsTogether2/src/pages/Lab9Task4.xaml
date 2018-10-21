@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="LabsTogether2.src.pages.Lab7Task3"
+    x:Class="LabsTogether2.src.pages.Lab9Task4"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:LabsTogether2.src.pages"
@@ -15,11 +15,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Лабораторная работа № 7" Style="{StaticResource taskHeadlineBlock}"/>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 9" Style="{StaticResource taskHeadlineBlock}"/>
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Задание № 3" Style="{StaticResource taskTextBlock}"/>
-            <TextBlock Text="Составить программу в соответствии с вариантом." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
-            <TextBlock Text="Вариант 3. Создание базы данных студентов группы. Осуществить функцию поиска по фамилиям." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Задание № 4" Style="{StaticResource taskTextBlock}"/>
+            <TextBlock Text="Создать классы необходимые для описания сведений об абитуриенте и ме-тоды для управления полученными данными. В классах должна содержаться основная информация о паспортных данных абитуриента, об уровне образова-ния, об экзаменах, о выбранных специальностях." TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
         </StackPanel>
         <RelativePanel Grid.Row="2" Padding="5">
             <Grid Name="gridHeader">
