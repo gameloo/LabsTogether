@@ -85,7 +85,7 @@ namespace LabsTogether2
 
         private void MenuFlyoutItem_Click_Lab6Task2(object sender, RoutedEventArgs e)
         {
-           // Frame.Navigate(typeof(Lab5Task2));
+           // Frame.Navigate(typeof(Lab6Task2));
         }
 
         private void MenuFlyoutItem_Click_Lab7Task1(object sender, RoutedEventArgs e)
@@ -123,5 +123,27 @@ namespace LabsTogether2
             Frame.Navigate(typeof(Lab12));
         }
 
+        private void Button_Click_Lab10(object sender, RoutedEventArgs e)
+        {
+            Lab10();
+        }
+
+        private async void Lab10()
+        {
+            ContentDialog dialog = new ContentDialog()
+            {
+                Title = "Подтверждение действия",
+                Content = "Вы действительно хотите открыть новое диалоговое окно?",
+                PrimaryButtonText = "Да",
+                SecondaryButtonText = "Отмена"
+            };
+
+            ContentDialogResult result = await dialog.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                Lab10();
+            }
+        }
     }
 }
