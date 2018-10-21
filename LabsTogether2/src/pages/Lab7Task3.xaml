@@ -31,6 +31,7 @@
                                 <ColumnDefinition Width="300"/>
                                 <ColumnDefinition Width="300"/>
                                 <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="{Binding Path=FirstName}"/>
                             <TextBlock Grid.Column="1" Text="{Binding Path=LastName}"/>
@@ -40,12 +41,13 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel Orientation="Horizontal" RelativePanel.Below="lvStudents">
-                <Button Content="Add" Margin="5" Click="AddNewStudent"/>
                 <TextBox Name="tbFN" PlaceholderText="Имя" Margin="5"/>
                 <TextBox Name="tbLN" PlaceholderText="Фамилия" Margin="5"/>
                 <TextBox Name="tbP" PlaceholderText="Отчество" Margin="5"/>
                 <TextBox Name="tbPID" PlaceholderText="Номер паспорта" Margin="5"/>
                 <ComboBox Name="cbLOE" ItemsSource="{x:Bind levelOfEducations}" Margin ="5"/>
+                <Button Content="Add" Margin="50,5,5,5" Click="AddNewStudent"/>
+                <Button Content="Delete" Margin="50,5,5,5" Click="RemoveStudent"/>
             </StackPanel>
         </RelativePanel>
     </Grid>

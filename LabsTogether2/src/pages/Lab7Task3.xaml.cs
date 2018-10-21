@@ -48,6 +48,10 @@ namespace LabsTogether2.src.pages
                 await other.Window.ShowErrorWindowAsync(ex);
             }
         }
- 
+
+        private void RemoveStudent(object sender, RoutedEventArgs e)
+        {
+            students.Remove((Student)lvStudents.SelectedItem);
+        }
     }
 }
