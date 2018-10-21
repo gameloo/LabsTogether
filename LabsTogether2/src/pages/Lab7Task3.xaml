@@ -33,10 +33,8 @@
                 <TextBlock Grid.Column="0" Text="Имя"/>
                 <TextBlock Grid.Column="1" Text="Фамилия"/>
                 <TextBlock Grid.Column="2" Text="Отчество"/>
-                <TextBlock Grid.Column="3" Text="Номер паспорта"/>
-                <TextBlock Grid.Column="4" Text="Уровень образования"/>
             </Grid>
-            <ListView Name="lvStudents" ItemsSource="{x:Bind students}" RelativePanel.Below="gridHeader">
+            <ListView Name="lvStudents" ItemsSource="{x:Bind studentsResponse}" RelativePanel.Below="gridHeader">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -45,25 +43,17 @@
                                 <ColumnDefinition Width="300"/>
                                 <ColumnDefinition Width="300"/>
                                 <ColumnDefinition Width="300"/>
-                                <ColumnDefinition Width="300"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0" Text="{Binding Path=FirstName}"/>
                             <TextBlock Grid.Column="1" Text="{Binding Path=LastName}"/>
                             <TextBlock Grid.Column="2" Text="{Binding Path=Patronymic}"/>
-                            <TextBlock Grid.Column="3" Text="{Binding Path=PassportID}"/>
-                            <TextBlock Grid.Column="4" Text="{Binding Path=Education}"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel Orientation="Horizontal" RelativePanel.Below="lvStudents">
-                <TextBox Name="tbFN" PlaceholderText="Имя" Margin="5"/>
                 <TextBox Name="tbLN" PlaceholderText="Фамилия" Margin="5"/>
-                <TextBox Name="tbP" PlaceholderText="Отчество" Margin="5"/>
-                <TextBox Name="tbPID" PlaceholderText="Номер паспорта" Margin="5"/>
-                <ComboBox Name="cbLOE" ItemsSource="{x:Bind levelOfEducations}" Margin ="5"/>
-                <Button Content="Add" Margin="50,5,5,5" Click="AddNewStudent"/>
-                <Button Content="Delete" Margin="50,5,5,5" Click="RemoveStudent"/>
+                <Button Content="Find" Margin="50,5,5,5" Click="FindStudent"/>
             </StackPanel>
         </RelativePanel>
     </Grid>
