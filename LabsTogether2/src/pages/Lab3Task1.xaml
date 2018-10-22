@@ -14,7 +14,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Лабораторная работа № 2" Style="{StaticResource taskHeadlineBlock}"/>
+        <TextBlock Grid.Row="0" Text="Лабораторная работа № 3" Style="{StaticResource taskHeadlineBlock}"/>
         <StackPanel Grid.Row="1">
             <TextBlock Text="Задание № 1" Style="{StaticResource taskTextBlock}"/>
             <TextBlock Text="Написать на языке C# логическое выражение, принимающее значение ис-тина или ложь при выполнении условия:" TextWrapping="WrapWholeWords" Style="{StaticResource taskTextBlock}"/>
